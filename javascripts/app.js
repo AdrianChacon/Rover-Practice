@@ -21,7 +21,7 @@ var board = [
 // ======================
 
 function getRandomNum(){
-  return Math.floor(Math.random() * 9);
+  return Math.floor(Math.random() * 10);
 }
 
 function createObstacles(numberOfObstacles) {
@@ -127,7 +127,7 @@ function moveForward(rover){
         board[rover.x][rover.y] = "rv";
       }
       break;
-    case "w":
+    case "W":
       if (rover.x === 0){
         console.log("You are going outside the grid! You can not do that!");
       } else if ( board[(rover.x)-1][rover.y]==="ob"){
@@ -180,7 +180,7 @@ function moveBackward(rover){
         board[rover.x][rover.y] = "rv";
       }
       break;
-    case "w":
+    case "W":
       if (rover.x === 9){
         console.log("You are going outside the grid! You can not do that!");
       } else if ( board[(rover.x)+1][rover.y]==="ob"){
